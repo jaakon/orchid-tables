@@ -31,7 +31,7 @@
             <tbody>
 
             @foreach($rows as $source)
-                <tr @class($rowClass($source)) data-table-advanced-rowlink="{{$rowLink($source)}}">
+                <tr @class($rowClass($source)) @if($rowLink($source)) data-table-advanced-rowlink="{{$rowLink($source)}}" @endif>
                     @foreach($columns as $column)
                         {!! $column->buildTd($source, $loop->parent) !!}
                     @endforeach
