@@ -9,8 +9,8 @@
 @endempty
 
 <div class="bg-white rounded shadow-sm mb-3"
-     data-controller="tableAdvanced"
-     data-table-advanced-slug="{{$slug}}"
+     data-controller="table"
+     data-table-slug="{{$slug}}"
 >
 
     <div class="table-responsive">
