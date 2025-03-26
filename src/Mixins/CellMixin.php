@@ -123,9 +123,9 @@ class CellMixin
             $this->render(function ($datum) use ($column) {
                 $value = $datum->getContent($column);
 
-                $icon = $value ? ['path' => 'check', 'fill' => 'green'] : ['path' => 'cross', 'fill' => 'red'];
+                $icon = $value ? ['path' => 'check', 'fill' => 'green'] : ['path' => 'x', 'fill' => 'red'];
 
-                return app(IconComponent::class, $icon)->render()->toHtml();
+                return app(IconComponent::class, $icon)->render()();
             });
 
             return $this;
